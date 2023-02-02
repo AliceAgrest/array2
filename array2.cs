@@ -180,3 +180,81 @@
                 Console.WriteLine("Idk");
 
             Console.ReadLine();
+                
+                
+                
+                
+                
+          ////////////////////////////////////////////////////////
+                //The fun get int arr and do reset for all of him numbers
+        public static void Reset (int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                arr[i] = 0;
+        }
+        //The fun get int arr and print it with [] format
+        public static void PrintArr (int[] arr)
+        {
+            Console.Write("[");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write($"{arr[i]}");
+                if (i < arr.Length - 1)
+                    Console.Write(" ,");
+            }
+            Console.Write("]");
+        }
+        //The fun get a length of the array and returns an array
+        public static int[] FillArr(int n) {
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                Console.WriteLine("Enter a number: ");
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            return arr;
+        }
+        public static void Balanced (int[] arr)
+        {
+            double avg = 0;
+            int biggerThenAvg = 0;
+            int smallerThenAvg = 0;
+            for (int i = 0; i < arr.Length; i++) {
+                avg += arr[i];
+            }
+            avg /= arr.Length;
+            for (int i = 0; i < arr.Length; i++) {
+                if (arr[i] < avg)
+                    smallerThenAvg++;
+                else if (arr[i] > avg)
+                    biggerThenAvg++;
+            }
+            if (smallerThenAvg == biggerThenAvg)
+                Console.WriteLine("True");
+            else
+                Console.WriteLine("False");
+        }
+        public static void BonusForGrade(double[] arr) { 
+            
+        }
+        static void Main(string[] args)
+        {
+            //q1
+            /*int[] arr1 = {2, 54, 78, 76 ,98};
+            PrintArr(arr1);
+
+            //q2
+            Console.WriteLine("Enter a number for array: ");
+            int num = int.Parse(Console.ReadLine());
+            int[] arr2 = new int[num];
+            Reset(arr2);
+            arr2 = FillArr(num);
+
+            //q3
+            int[] arr3 = {4,5 ,4,5 };
+            Balanced(arr3);*/
+
+            //q4
+            double[] grades = {89, 90, 45, 78, 99 };
+
+
+            Console.ReadLine();
